@@ -48,18 +48,67 @@ public class JuanIdiaquez_Lab2P2 {
                             System.out.println();
                             System.out.println("Ingrese el numero de enfrente de la opcion para selecionarla");
                             int menu2=pd.nextInt();
+                            
                             switch(menu2){
                                 case 1:
-                                    System.out.println("hola1");
+                                    int bandiC = 0;
+                                    while (bandiC != 5) {
+                                        System.out.println("Bienvenido, esta en el apartado de Chefs");
+                                        System.out.println("Estas son sus opciones:");
+                                        System.out.println();
+                                        System.out.println("1.Crear un chef");
+                                        System.out.println("2.Listar chefs");
+                                        System.out.println("3.Modificar un chef");
+                                        System.out.println("4.Eliminar un chef");
+                                        System.out.println("5.Salir");
+                                        System.out.println();
+                                        System.out.println("Ingrese el numero de enfrente de la opcion para selecionarla");
+                                    }
                                     break;
                                 case 2:
-                                    System.out.println("hola2");
+                                    int bandiM = 0;
+                                    while (bandiM != 5) {
+                                        System.out.println("Bienvenido, esta en el apartado de Meseros");
+                                        System.out.println("Estas son sus opciones:");
+                                        System.out.println();
+                                        System.out.println("1.Crear un mesero");
+                                        System.out.println("2.Listar meseros");
+                                        System.out.println("3.Modificar un mesero");
+                                        System.out.println("4.Eliminar un mesero");
+                                        System.out.println("5.Salir");
+                                        System.out.println();
+                                        System.out.println("Ingrese el numero de enfrente de la opcion para selecionarla");
+                                    }
                                     break;
                                 case 3:
-                                    System.out.println("hola3");
+                                    int bandiB = 0;
+                                    while (bandiB != 5) {
+                                        System.out.println("Bienvenido, esta en el apartado de Bartenders");
+                                        System.out.println("Estas son sus opciones:");
+                                        System.out.println();
+                                        System.out.println("1.Crear un bartender");
+                                        System.out.println("2.Listar bartenders");
+                                        System.out.println("3.Modificar un bartender");
+                                        System.out.println("4.Eliminar un bartender");
+                                        System.out.println("5.Salir");
+                                        System.out.println();
+                                        System.out.println("Ingrese el numero de enfrente de la opcion para selecionarla");
+                                    }
                                     break;
                                 case 4:
-                                    System.out.println("hola4");
+                                   int bandiMe = 0;
+                                    while (bandiMe != 5) {
+                                        System.out.println("Bienvenido, esta en el apartado de Mesas");
+                                        System.out.println("Estas son sus opciones:");
+                                        System.out.println();
+                                        System.out.println("1.Crear una Mesa");
+                                        System.out.println("2.Listar Mesas");
+                                        System.out.println("3.Modificar una Mesas");
+                                        System.out.println("4.Eliminar una Mesa");
+                                        System.out.println("5.Salir");
+                                        System.out.println();
+                                        System.out.println("Ingrese el numero de enfrente de la opcion para selecionarla");
+                                    }
                                     break;
                                 case 5:
                                     System.out.println("Ejecucion total terminada, saliendo....");
