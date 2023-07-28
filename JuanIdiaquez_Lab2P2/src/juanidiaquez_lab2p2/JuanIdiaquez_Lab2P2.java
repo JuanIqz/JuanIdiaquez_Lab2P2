@@ -22,8 +22,10 @@ public class JuanIdiaquez_Lab2P2 {
         ArrayList<Bartenders> Bartenders = new ArrayList();
         ArrayList<Mesas> Mesas = new ArrayList();
         Scanner pd = new Scanner(System.in);
-        String contraseñaE = "02112005";
-        //la contraseña es 02112005
+        double precioF=0;
+        String contraseñaE = "g3r$nt0";
+        String usuario= "gerente";
+        //la contraseña es g3r$nt0
         System.out.println("Bienvenido al sistema de control del restaurante");
         int banderaI = 0;
         while (banderaI != 2) {
@@ -37,9 +39,11 @@ public class JuanIdiaquez_Lab2P2 {
             switch (menu1) {
                 case 1:
                     //la contraseña es de formato numerico
-                    System.out.println("Bienvenido usuario, ingrese su contraseña numerica:");
+                    System.out.println("Bienvenido usuario, ingrese su contraseña y usuario:");
                     String contraseñaT = pd.next();
-                    if (contraseñaT.contentEquals(contraseñaE)) {
+                    System.out.println("Usuario");
+                     String usuarioT= pd.next();
+                    if (contraseñaT.contentEquals(contraseñaE)&&usuarioT.contentEquals(usuario)) {
                         int banderaM2 = 0;
                         while (banderaM2 != 5) {
                             System.out.println("Bienvenido al sistema, que empleados o recursos desea gestionar");
@@ -285,7 +289,8 @@ public class JuanIdiaquez_Lab2P2 {
                                         System.out.println("2.Listar Mesas");
                                         System.out.println("3.Modificar una Mesas");
                                         System.out.println("4.Eliminar una Mesa");
-                                        System.out.println("5.Salir");
+                                        System.out.println("5.Dar el total de las mesas");
+                                        System.out.println("6.Salir");
                                         System.out.println();
                                         System.out.println("Ingrese el numero de enfrente de la opcion para selecionarla");
                                         int menuMM = pd.nextInt();
@@ -315,6 +320,7 @@ public class JuanIdiaquez_Lab2P2 {
                                                 System.out.println("Defina el precio de su mesa");
                                                 double S = pd.nextDouble();
                                                 Mesas.add(new Mesas(E, L, S));
+                                                Mesas.remove(p);
                                             } else {
                                                 System.out.println("Posicion no valida");
                                             }
@@ -327,6 +333,12 @@ public class JuanIdiaquez_Lab2P2 {
                                                 System.out.println("Posicion no valida");
                                             }
                                         } else if (menuMM == 5) {
+                                            for (int i = 0; i < Mesas.size(); i++) {
+                                                double a = Mesas.get(i).getPrecio();
+                                                precioF=precioF+a;
+                                            }
+                                            System.out.println("El total de precio de todas las mesas es "+precioF);
+                                        }else if (menuMM == 6) {
                                             System.out.println("Saliendo....");
                                             bandiMe = 5;
                                         }
@@ -343,7 +355,7 @@ public class JuanIdiaquez_Lab2P2 {
                             }
                         }
                     } else {
-                        System.out.println("Contraseña incorrecta, pruebe con otra");
+                        System.out.println("Contraseña o usuario incorrecto, pruebe con otra");
                     }
                     break;
                 case 2:
